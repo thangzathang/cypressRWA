@@ -11,9 +11,7 @@ import { mergeConfig, loadEnv } from "vite";
 dotenv.config({ path: ".env.local" });
 dotenv.config();
 
-let awsConfig = {
-  default: undefined,
-};
+let awsConfig = require("./aws-exports-es5.js");
 
 try {
   awsConfig = require(path.join(__dirname, "./aws-exports-es5.js"));
